@@ -4,6 +4,13 @@ interface Billable {
 }
 
 public class Patient extends Person implements Billable {
+    double temp;
+    int bp;
+    int sugar;
+
+    static Patient p_arr[] = new Patient[10];
+    static int p_count = 0;
+    
     void InsertPatientDetails() {
         if (i >= 20) {
             System.out.println("Max Patient Cpacity reached");
