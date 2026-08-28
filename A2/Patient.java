@@ -1,4 +1,5 @@
-package Lab3;
+package A2;
+
 interface Billable {
     public float calculateBill();
 }
