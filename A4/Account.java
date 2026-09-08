@@ -1,4 +1,4 @@
-// package A3;
+// package A4;
 
 // import java.util.Scanner;
 
@@ -28,7 +28,7 @@
 //     }
 // }
 
-package A3;
+package A4;
 import java.util.*;
 
 class InsufficientBalanceException extends Exception
