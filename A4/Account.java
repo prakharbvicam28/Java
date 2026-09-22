@@ -33,8 +33,8 @@ import java.util.*;
 
 class InsufficientBalanceException extends Exception
 {
-    @Override
-    public String getMessage() {
+    @Override 
+    public String toString() {
         return "Insufficient Balance !";
     }
 }

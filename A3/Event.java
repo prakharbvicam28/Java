@@ -121,34 +121,11 @@ public class Event extends SeatAllocate {
         System.out.println("Average Score is: "+avg);
     }
 
-    void VenueAllocate()
-    {
-        
-        System.out.print("Enter the Event to allocate venue: ");
-        String event=sc.next();
-        int prt=0;
-        for (String[] a: pt)
-            {
-                if (a[1]==event)
-                    {
-                        prt++ ;
-                    }
-
-            }
-        if (prt>=3)
-            {
-                int v_id=rd.nextInt(venues.length);
-                System.out.println("Venue Allocated: "+venues[v_id]);
-            }
-        else{
-            System.out.println("Insufficicnet Participants :( ");
-        }
-    }
-
-
     public static void main(String[] args) {
-        Event ev=new Event();
-        boolean flag=true;
+        Event ev = new Event();
+        EventAnalyzer analyzer = new EventAnalyzer(); // Instantiate our new helper class!
+        boolean flag = true;
+        
         while (flag)
         {
             System.out.println();
@@ -163,10 +140,12 @@ public class Event extends SeatAllocate {
             System.out.println("9 --> Check MAX Occupied Row/Column ");
             System.out.println("10--> Show seat status ");
             System.out.println("11 --> Triangular Seat Arrangement ");
-            System.out.println("12--> Exit ");
+            System.out.println("12 --> Search Participants ");
+            System.out.println("13 --> Exit ");
             System.out.print("Enter choice:  ");
             int ch=ev.sc.nextInt();
             System.out.println();
+            
             switch (ch) {
             case 1:
                 ev.Register();
@@ -184,7 +163,8 @@ public class Event extends SeatAllocate {
                 ev.Average();
                 break;
             case 6:
-                ev.VenueAllocate();
+                // Call the method from EventAnalyzer, passing our arrays and counts!
+                analyzer.VenueAllocate(ev.events, ev.venues, ev.pt, ev.pt_c);
                 break;
             case 7:
                 ev.CountSeats(1);
@@ -205,7 +185,11 @@ public class Event extends SeatAllocate {
                 ev.TriSeat(r);
                 break;
             case 12:
-                flag=false;
+                // Call the method from EventAnalyzer
+                analyzer.SearchParticipants(ev.pt, ev.pt_c, ev.sc);
+                break;
+            case 13:
+                flag = false;
                 break;
             default:
                 System.out.println("Invalid choice");
