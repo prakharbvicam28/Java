@@ -1,5 +1,3 @@
-package A7;
-
 import java.io.*;
 import java.net.*;
 

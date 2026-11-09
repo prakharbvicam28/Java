@@ -1,4 +1,4 @@
-package A3;
+// package A3;
 import java.util.*;
 public class Event extends SeatAllocate {
     Scanner sc=new Scanner(System.in);

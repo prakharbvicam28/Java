@@ -1,4 +1,4 @@
-package A3;
+// package A3;
 
 public class SeatAllocate extends TriangularSeatArrangement {
     int seat[][]=new int[5][5];

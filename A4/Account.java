@@ -1,4 +1,3 @@
-// package A4;
 
 // import java.util.Scanner;
 
@@ -10,7 +9,7 @@
 //         if (amt<=bal)
 //             {
 //                 bal=bal-amt;
-//                 System.out.println("Current balance: "+bal);
+//                 System.out.println(" balance After withdrwal: "+bal);
 //             }
 //         else{
 //             System.out.println("Insufficient balance !");
@@ -20,6 +19,7 @@
 //     public static void main(String[] args) {
 //         Scanner sc=new Scanner(System.in);
 //         Account acc=new Account();
+//         System.out.println("Current balance "+acc.bal);
 //         System.out.print("Enter amount to withdraw: ");
 //         int a=sc.nextInt();
 //         acc.withdraw(a);
@@ -28,7 +28,7 @@
 //     }
 // }
 
-package A4;
+
 import java.util.*;
 
 class InsufficientBalanceException extends Exception
@@ -66,7 +66,7 @@ public class Account
         }
         catch(InsufficientBalanceException io)
         {
-            System.out.println(io.getMessage());
+            System.out.println(io);
         }
         
         sc.close();

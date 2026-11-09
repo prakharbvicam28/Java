@@ -1,4 +1,4 @@
-package A2;
+// package A2;
 
 public class Doctor extends Person {
      void InsertDocDetails() {

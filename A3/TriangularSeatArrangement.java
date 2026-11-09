@@ -1,4 +1,4 @@
-package A3;
+// package A3;
 
 public class TriangularSeatArrangement {
     void TriSeat(int x)
